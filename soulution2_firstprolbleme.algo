@@ -1,0 +1,37 @@
+
+ALGORITHM distinct_elements //solution HASHtable
+VAR
+htab: HASH_TABLE<INTEGER,INTEGER>;
+j,i,n,m:INTEGER;
+count:INTEGER:=0;
+array1 : ARRAY_OF[n];
+array2:ARRAY_OF[m];
+array : ARRAY_OF[INTEGER]:=[];
+    
+BEGIN
+read(n);
+read(m);
+read(array1);
+read(array2);
+FOR i FROM 0 TO n-1 STEP 1  DO
+ array.push(array1[i]);
+    
+END_FOR
+FOR j FROM 0 TO m-1 STEP 1  DO
+    array.push(array2[i]);
+END_FOR
+FOR i FROM 0 TO array.length-1 STEP 1  DO
+    IF(htab.lookup(array[i])== true) THEN
+    count:=htab.get(array[i]);
+    htab.insert(array[i],count+1);
+    ELSE 
+    htab.insert(array[i],1);
+    END_IF
+END_FOR
+FOR i FROM 0 TO array.length-1 STEP 1  DO
+    IF (htab.get(array[i])=1) THEN
+    sum:= sum + array[i];
+END_FOR
+write(sum);
+    
+END
