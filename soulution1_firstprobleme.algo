@@ -2,9 +2,9 @@ ALGORITHM distinct_elements //solution ARRAY+loop
 VAR
 j,i,n,m:INTEGER;
 count:INTEGER:=0;
-array1 : ARRAY_OF[n];
-array2:ARRAY_OF[m];
-array : ARRAY_OF[INTEGER]:=[];
+array1 : ARRAY_OF INTEGER[n];
+array2:ARRAY_OF INTEGER[m];
+array : ARRAY_OF INTEGER[]:=[];
     
 BEGIN
 read(n);
